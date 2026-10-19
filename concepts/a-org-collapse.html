@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Concept A: Big Org To Small Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root { --field: #0C2547; --field-2: #10305C; --line: rgba(255,255,255,.14); --soft: rgba(255,255,255,.62); --amber: #F5C542; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--field); color: #fff; font-family: 'Schibsted Grotesk', sans-serif; overflow-x: hidden; }
+  .nav { display: flex; justify-content: space-between; align-items: center; padding: 22px 40px; }
+  .brand { font-weight: 800; font-size: 1.15rem; letter-spacing: -.02em; }
+  .nav a { color: #fff; text-decoration: none; }
+  .nav .links { display: flex; gap: 28px; font-weight: 500; color: var(--soft); }
+  .btn { display: inline-block; padding: 12px 20px; background: #fff; color: var(--field) !important; font-weight: 700; border-radius: 4px; }
+  .hero { display: grid; grid-template-columns: 1fr 1.25fr; gap: 24px; align-items: center; padding: 10px 40px 40px; min-height: calc(100vh - 80px); }
+  h1 { margin: 0; font-weight: 800; font-size: clamp(2.8rem, 5.6vw, 5.4rem); line-height: .98; letter-spacing: -.045em; }
+  h1 em { font-style: normal; color: var(--amber); }
+  .sub { margin: 26px 0 0; font-size: 1.25rem; line-height: 1.45; color: var(--soft); max-width: 30ch; }
+  .cta { margin-top: 34px; display: flex; gap: 14px; align-items: center; }
+  .cta .ghost { color: #fff; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,.4); padding-bottom: 2px; }
+  .stage { position: relative; }
+  svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .count { font-family: 'Schibsted Grotesk'; font-weight: 800; fill: #fff; letter-spacing: -.04em; }
+  .countlab { font-family: 'IBM Plex Mono'; font-size: 13px; fill: var(--soft); }
+  .dept { font-family: 'IBM Plex Mono'; font-size: 11.5px; fill: var(--soft); }
+  .prod { font-family: 'Schibsted Grotesk'; font-weight: 700; font-size: 15px; fill: #fff; }
+  .prodjob { font-family: 'IBM Plex Mono'; font-size: 10.5px; fill: var(--soft); }
+  .person { font-family: 'IBM Plex Mono'; font-size: 11px; fill: var(--field); font-weight: 500; }
+  .replay { position: absolute; right: 0; bottom: -6px; font: 12px 'IBM Plex Mono'; color: var(--soft); background: none; border: 0; cursor: pointer; }
+  @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .nav .links { display: none; } }
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#">DeftSuite</a>
+  <nav class="links"><a href="#">The Suite</a><a href="#">How It Works</a><a href="#">Pricing</a></nav>
+  <a class="btn" href="#">Request Early Access</a>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Pass Procurement Like A <em>300-Person</em> Vendor</h1>
+    <p class="sub">With the three people you already have.</p>
+    <div class="cta"><a class="btn" href="#">See Pricing</a><a class="ghost" href="#">See How It Works</a></div>
+  </div>
+  <div class="stage">
+    <svg id="org" viewBox="0 0 820 620" aria-label="A 300-person organisation collapsing into a three-person team supported by Deft products"></svg>
+    <button class="replay" id="replay" type="button">Replay</button>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  var svg = document.getElementById('org');
+  function el(tag, attrs, parent) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    (parent || svg).appendChild(e); return e;
+  }
+
+  // Departments an enterprise-selling vendor usually staffs, and the product that does that work.
+  var depts = [
+    { name: 'Security & IT',      n: 46, x: 150, y: 150, prod: 'DeftTrust',   job: 'controls + evidence' },
+    { name: 'Compliance',         n: 28, x: 400, y: 120, prod: 'DeftInfra',   job: 'change records' },
+    { name: 'Policy & Legal',     n: 24, x: 650, y: 150, prod: 'DeftDocs',    job: 'signed policies' },
+    { name: 'Customer Support',   n: 96, x: 140, y: 420, prod: 'DeftDesk',    job: 'portal + docs' },
+    { name: 'Proposals & Sales Ops', n: 42, x: 410, y: 480, prod: 'DeftRevenue', job: 'quotes + proposals' },
+    { name: 'Operations',         n: 64, x: 670, y: 420, prod: 'DeftAgents',  job: 'the busywork' }
+  ];
+  var CENTER = { x: 410, y: 300 };
+  var people = [ { x: CENTER.x - 46, y: CENTER.y + 10, t: 'CEO' }, { x: CENTER.x + 46, y: CENTER.y + 10, t: 'CTO' }, { x: CENTER.x, y: CENTER.y - 62, t: 'HIRE' } ];
+
+  var gLines = el('g', {}), gDots = el('g', {}), gLabels = el('g', {}), gPeople = el('g', {});
+  var countText = el('text', { x: 410, y: 312, 'text-anchor': 'middle', 'class': 'count', 'font-size': 96 });
+  var countLab = el('text', { x: 410, y: 344, 'text-anchor': 'middle', 'class': 'countlab' });
+  countLab.textContent = 'people to pass an enterprise review';
+
+  var dots = [], labels = [];
+  depts.forEach(function (d, di) {
+    var cols = Math.ceil(Math.sqrt(d.n * 1.6)), gap = 11;
+    var rows = Math.ceil(d.n / cols);
+    for (var i = 0; i < d.n; i++) {
+      var cx = d.x + (i % cols - (cols - 1) / 2) * gap;
+      var cy = d.y + (Math.floor(i / cols) - (rows - 1) / 2) * gap;
+      var p = people[i % 3];
+      dots.push({ e: el('circle', { cx: cx, cy: cy, r: 3.4, fill: '#fff', opacity: 0 }, gDots), hx: cx, hy: cy, px: p.x, py: p.y, di: di });
+    }
+    var top = d.y - (rows / 2) * gap - 14;
+    var lab = el('text', { x: d.x, y: top, 'text-anchor': 'middle', 'class': 'dept', opacity: 0 }, gLabels);
+    lab.textContent = d.name.toUpperCase() + ' · ' + d.n;
+    // product node, revealed after the collapse
+    var line = el('line', { x1: CENTER.x, y1: CENTER.y, x2: d.x, y2: d.y, stroke: 'rgba(255,255,255,.22)', 'stroke-width': 1, 'stroke-dasharray': '3 4', opacity: 0 }, gLines);
+    var ring = el('g', { opacity: 0, transform: 'translate(' + d.x + ' ' + d.y + ')' }, gLabels);
+    el('rect', { x: -70, y: -24, width: 140, height: 48, rx: 2, fill: '#10305C', stroke: 'rgba(255,255,255,.35)' }, ring);
+    var pt = el('text', { x: 0, y: -2, 'text-anchor': 'middle', 'class': 'prod' }, ring); pt.textContent = d.prod;
+    var pj = el('text', { x: 0, y: 14, 'text-anchor': 'middle', 'class': 'prodjob' }, ring); pj.textContent = d.job;
+    labels.push({ lab: lab, line: line, ring: ring });
+  });
+  var personEls = people.map(function (p) {
+    var g = el('g', { opacity: 0, transform: 'translate(' + p.x + ' ' + p.y + ')' }, gPeople);
+    el('circle', { r: 26, fill: '#F5C542' }, g);
+    var t = el('text', { y: 4, 'text-anchor': 'middle', 'class': 'person' }, g); t.textContent = p.t;
+    return g;
+  });
+
+  var counter = { v: 0 };
+  function setCount() { countText.textContent = Math.round(counter.v); }
+
+  var tl;
+  function build() {
+    if (tl) tl.kill();
+    dots.forEach(function (d) { gsap.set(d.e, { attr: { cx: d.hx, cy: d.hy, r: 3.4 }, opacity: 0 }); });
+    labels.forEach(function (l) { gsap.set([l.lab], { opacity: 0 }); gsap.set([l.line, l.ring], { opacity: 0 }); });
+    gsap.set(personEls, { opacity: 0, scale: .4, transformOrigin: '50% 50%' });
+    gsap.set([countText, countLab], { opacity: 1 }); counter.v = 0; setCount();
+
+    tl = gsap.timeline({ delay: .3 });
+    tl.to(dots.map(function (d) { return d.e; }), { opacity: .85, duration: .25, stagger: { each: .004, from: 'random' } }, 0)
+      .to(counter, { v: 300, duration: 1.4, ease: 'power2.out', onUpdate: setCount }, 0)
+      .to(labels.map(function (l) { return l.lab; }), { opacity: 1, duration: .4, stagger: .08 }, .6)
+      .to({}, { duration: 1.4 })
+      // collapse
+      .to(labels.map(function (l) { return l.lab; }), { opacity: 0, duration: .3 }, '>')
+      .addLabel('collapse')
+      .to(dots.map(function (d) { return d.e; }), {
+        attr: { cx: function (i) { return dots[i].px; }, cy: function (i) { return dots[i].py; }, r: 1.5 },
+        duration: 1.1, ease: 'power3.inOut', stagger: { each: .002, from: 'random' }
+      }, 'collapse')
+      .to(counter, { v: 3, duration: 1.2, ease: 'power3.inOut', onUpdate: setCount }, 'collapse')
+      .to([countText, countLab], { opacity: 0, duration: .3 }, 'collapse+=1.1')
+      .to(personEls, { opacity: 1, scale: 1, duration: .5, ease: 'back.out(2)', stagger: .08 }, 'collapse+=1.05')
+      .to(dots.map(function (d) { return d.e; }), { opacity: 0, duration: .2 }, 'collapse+=1.15')
+      // the products take over each department's work
+      .to(labels.map(function (l) { return l.line; }), { opacity: 1, duration: .4, stagger: .1 }, 'collapse+=1.5')
+      .to(labels.map(function (l) { return l.ring; }), { opacity: 1, duration: .45, stagger: .1 }, 'collapse+=1.55');
+  }
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  build(); if (reduce) tl.progress(1);
+  document.getElementById('replay').addEventListener('click', build);
+})();
+</script>
+</body>
+</html>
