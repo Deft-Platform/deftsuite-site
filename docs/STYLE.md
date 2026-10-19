@@ -16,7 +16,8 @@ NEA-backed).
 2. **Heading case.** Title Case on every heading and button.
 3. **Type — not standard AI.** Rejected as AI-template defaults: Inter, Geist, Space Grotesk,
    DM Sans, Plus Jakarta Sans, Manrope, Outfit, Poppins, Sora, Satoshi, General Sans, Cabinet
-   Grotesk. Shortlist in `docs/type-specimen.html`; pairing to be chosen from it.
+   Grotesk. Chosen from `docs/type-specimen.html`: **Schibsted Grotesk** for display and body
+   (headings 800 at -0.035em, subheads 700), **IBM Plex Mono** for labels, data and control IDs.
 
 ## Still proposed
 

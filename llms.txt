@@ -1,0 +1,34 @@
+# DeftSuite
+
+> The lean team's enterprise toolkit. DeftSuite runs the security review, the policies behind it, the support portal after signature, and agents that keep all three current, for founder-led B2B teams selling to enterprise.
+
+## Products and status
+
+Win:
+- DeftRevenue: quotes, proposals and accounts. Early access.
+- DeftMarketing: site content, approvals and newsletters. In build.
+- DeftDemo: product walkthroughs replayed from the real app. In build.
+
+Pass review:
+- DeftTrust: SOC 2 controls with their evidence attached. Early access.
+- DeftDocs: policies and procedures, approved and versioned. In build.
+- DeftInfra: a change record for every environment and secret. In build.
+- Sentinel: external uptime monitoring. Early access.
+
+Keep:
+- DeftDesk: customer support portal and published documentation. Available.
+
+Do the work:
+- DeftAgents: agents that draft, file and follow up, with every action approved and logged. Early access.
+
+## Pricing
+
+Flat monthly price by team size. Every product included. No per-seat charges, no add-ons.
+
+- 1 to 9 people: $99 per month
+- 10 to 19 people: $249 per month
+- 20 or more people: $499 per month
+
+## Contact
+
+hello@deftsuite.com

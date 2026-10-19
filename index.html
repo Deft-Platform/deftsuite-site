@@ -4,30 +4,212 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DeftSuite: The Lean Team's Enterprise Toolkit</title>
-  <meta name="description" content="DeftSuite gives founder-led B2B teams what an enterprise buyer asks for, without the headcount." />
+  <meta name="description" content="DeftSuite runs the security review, the policies behind it and the support portal after signature for founder-led B2B teams selling to enterprise. $99 per month for teams under 10." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DeftSuite: The Lean Team's Enterprise Toolkit" />
+  <meta property="og:description" content="Pass procurement like a 300-person vendor." />
+  <meta property="og:url" content="https://deftsuite.com/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate" type="text/plain" href="llms.txt" title="Plain text for agents" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/deft.css" />
-  <style>
-    .holding { min-height: calc(100vh - 64px); display: flex; align-items: center; }
-    .holding h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); max-width: 14ch; }
-    .holding p { margin-top: 1.25rem; font-size: 1.15rem; color: var(--text-muted); max-width: 46ch; }
-  </style>
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav__inner">
-      <a class="nav__brand" href="/"><img class="nav__logo" src="assets/favicon.svg" alt="" />DeftSuite</a>
+
+<header class="nav">
+  <div class="container nav__inner">
+    <a class="nav__brand" href="/"><img class="nav__logo" src="assets/favicon.svg" alt="" />DeftSuite</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#suite">The Suite</a>
+      <a href="#questionnaire">How It Works</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav__right">
+      <a class="btn btn--sm" href="mailto:hello@deftsuite.com?subject=DeftSuite%20early%20access">Request Early Access</a>
+      <button class="nav__toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-  </header>
-  <main class="holding">
-    <div class="container">
-      <h1>The Lean Team's Enterprise Toolkit</h1>
-      <p>What an enterprise buyer asks of a vendor, run by a small team. Coming soon.</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div>
+        <span class="label">// LEAN TEAM, ENTERPRISE BUYER</span>
+        <h1>Pass Procurement Like A <span class="nw">300-Person</span> Vendor</h1>
+        <p class="hero__sub">DeftSuite runs the parts of an enterprise deal that usually take a department: the security review, the policies behind it, the support portal after signature, and agents that keep all three current.</p>
+        <div class="hero__cta">
+          <a class="btn btn--lg" href="#pricing">See Pricing</a>
+          <a class="btn btn--lg btn--ghost" href="#suite">See The Suite</a>
+        </div>
+        <p class="hero__note mono">$99 per month for teams under 10 people. Every product included.</p>
+      </div>
+
+      <div class="frame demo" aria-label="Example: a security questionnaire question answered from the suite">
+        <div class="demo__bar mono"><span><b>Vendor Security Review</b> · Halden Insurance</span><span>Q-14 of 214</span></div>
+        <div class="demo__q">
+          <span class="mono">Question 14 · Access control</span>
+          <p>Is multi-factor authentication enforced for all access to production systems?</p>
+        </div>
+        <ol class="trail">
+          <li class="step"><span class="step__prod">DeftDocs</span><span class="step__what">Access Control Policy v3.2</span><span class="step__meta">approved 2026-09-02 · section 4.1 requires MFA</span></li>
+          <li class="step"><span class="step__prod">DeftTrust</span><span class="step__what">CC6.1 Logical Access</span><span class="step__meta">control passing · cites policy v3.2</span></li>
+          <li class="step"><span class="step__prod">DeftTrust</span><span class="step__what">Evidence: SSO MFA enforcement export</span><span class="step__meta">collected 2026-10-16 · sha 9f3c2a</span></li>
+          <li class="step"><span class="step__prod">DeftAgents</span><span class="step__what">Answer drafted from the three records above</span><span class="step__meta">no record older than 90 days</span></li>
+        </ol>
+        <div class="answer">
+          <p class="answer__text" data-answer="Yes. Multi-factor authentication is enforced through single sign-on for every production system, as required by the Access Control Policy (v3.2, section 4.1). Evidence for control CC6.1 is attached."></p>
+          <div class="answer__row">
+            <span class="state state--wait">DRAFTING</span>
+            <button class="replay" type="button">Replay</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </main>
-  <script src="assets/js/deft.js"></script>
+  </section>
+
+  <!-- THE SUITE -->
+  <section class="section" id="suite">
+    <div class="container split">
+      <div>
+        <span class="label">// THE SUITE</span>
+        <h2>One Toolkit For Every Stage Of The Enterprise Deal</h2>
+        <p class="split__lead">Each product covers one thing an enterprise buyer asks of a vendor. They share one record, so an answer in the security review points to the same policy the support portal publishes.</p>
+      </div>
+      <div class="ledger">
+        <div class="ledger__group">Win · "Send us a proposal."</div>
+        <div class="ledger__row"><span class="ledger__name">DeftRevenue</span><span class="ledger__job">Quotes, proposals and accounts</span><span class="ledger__status is-early">Early Access</span></div>
+        <div class="ledger__row"><span class="ledger__name">DeftMarketing</span><span class="ledger__job">Site content, approvals and newsletters</span><span class="ledger__status">In Build</span></div>
+        <div class="ledger__row"><span class="ledger__name">DeftDemo</span><span class="ledger__job">Product walkthroughs replayed from the real app</span><span class="ledger__status">In Build</span></div>
+
+        <div class="ledger__group">Pass Review · "Send your SOC 2 and security questionnaire."</div>
+        <div class="ledger__row"><span class="ledger__name">DeftTrust</span><span class="ledger__job">SOC 2 controls with their evidence attached</span><span class="ledger__status is-early">Early Access</span></div>
+        <div class="ledger__row"><span class="ledger__name">DeftDocs</span><span class="ledger__job">Policies and procedures, approved and versioned</span><span class="ledger__status">In Build</span></div>
+        <div class="ledger__row"><span class="ledger__name">DeftInfra</span><span class="ledger__job">A change record for every environment and secret</span><span class="ledger__status">In Build</span></div>
+        <div class="ledger__row"><span class="ledger__name">Sentinel</span><span class="ledger__job">Uptime monitoring from a host separate from the servers it watches</span><span class="ledger__status is-early">Early Access</span></div>
+
+        <div class="ledger__group">Keep · "Where is your support portal?"</div>
+        <div class="ledger__row"><span class="ledger__name">DeftDesk</span><span class="ledger__job">Customer support portal and published documentation</span><span class="ledger__status is-live">Available</span></div>
+
+        <div class="ledger__group">Do The Work · across every stage</div>
+        <div class="ledger__row"><span class="ledger__name">DeftAgents</span><span class="ledger__job">Agents that draft, file and follow up, with every action approved and logged</span><span class="ledger__status is-early">Early Access</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE QUESTIONNAIRE -->
+  <section class="section" id="questionnaire">
+    <div class="container" data-view="without">
+      <div class="qhead">
+        <div>
+          <span class="label">// THE QUESTIONNAIRE</span>
+          <h2>Every Enterprise Deal Ends In A Spreadsheet</h2>
+          <p>A typical vendor security questionnaire runs to a few hundred rows. On a small team the founder answers it at night, from memory and last year's answers.</p>
+        </div>
+        <div class="seg" role="group" aria-label="Compare">
+          <button type="button" data-set="without" aria-pressed="true">Without Deft</button>
+          <button type="button" data-set="with" aria-pressed="false">With Deft</button>
+        </div>
+      </div>
+      <div class="qtable-wrap">
+        <table class="qtable">
+          <thead><tr><th>Question</th><th>Answer</th><th>Cites</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="q">Is MFA enforced for all production access?</td>
+              <td><span class="v-without">Yes, we use SSO.</span><span class="v-with">Yes, through single sign-on for every production system.</span></td>
+              <td class="mono"><span class="v-without">None</span><span class="v-with">CC6.1 · Access Control Policy v3.2</span></td>
+              <td class="mono"><span class="v-without is-stale">Copied from 2025</span><span class="v-with is-ok">Approved</span></td>
+            </tr>
+            <tr>
+              <td class="q">Provide your incident response plan.</td>
+              <td><span class="v-without">Attached (PDF).</span><span class="v-with">Incident Response Plan v2.0, published to the trust portal.</span></td>
+              <td class="mono"><span class="v-without">IR-plan-final-v3.pdf</span><span class="v-with">CC7.4 · Incident Response Plan v2.0</span></td>
+              <td class="mono"><span class="v-without is-stale">File from 2024</span><span class="v-with is-ok">Approved</span></td>
+            </tr>
+            <tr>
+              <td class="q">How often are backups tested?</td>
+              <td><span class="v-without">Regularly.</span><span class="v-with">Quarterly. The last restore test passed on 2026-09-30.</span></td>
+              <td class="mono"><span class="v-without">None</span><span class="v-with">A1.3 · evidence sha 4be71d</span></td>
+              <td class="mono"><span class="v-without is-stale">Unverified</span><span class="v-with is-ok">Approved</span></td>
+            </tr>
+            <tr>
+              <td class="q">Do you monitor availability externally?</td>
+              <td><span class="v-without">Blank</span><span class="v-with">Yes. Sentinel checks every production endpoint from a separate host.</span></td>
+              <td class="mono"><span class="v-without">None</span><span class="v-with">A1.2 · Sentinel check log</span></td>
+              <td class="mono"><span class="v-without is-stale">Unanswered</span><span class="v-with is-ok">Approved</span></td>
+            </tr>
+            <tr>
+              <td class="q">Who approves changes to production?</td>
+              <td><span class="v-without">The CTO.</span><span class="v-with">A second engineer approves every pull request before deploy.</span></td>
+              <td class="mono"><span class="v-without">None</span><span class="v-with">CC8.1 · Change Management SOP v1.4</span></td>
+              <td class="mono"><span class="v-without is-stale">Unverified</span><span class="v-with is-ok">Approved</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="section">
+    <div class="container"><div class="proof">
+      <span class="label">// WHY WE BUILT IT</span>
+      <blockquote>We built DeftSuite to run our own company, selling software to enterprise medical-device manufacturers with a small team.</blockquote>
+      <p>DeftDesk and DeftRevenue run in production for us today. The rest of the suite comes out of the same work, and we use each product before we sell it.</p>
+    </div></div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="container split">
+      <div>
+        <span class="label">// PRICING</span>
+        <h2>One Price By Team Size. Every Product Included.</h2>
+        <p class="split__lead">No per-seat charges and no add-ons. The price changes only when the team grows past a tier.</p>
+      </div>
+      <div>
+        <div class="qtable-wrap"><table class="ptable">
+          <thead><tr><th scope="col"></th><th scope="col">1–9 People</th><th scope="col">10–19 People</th><th scope="col">20+ People</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Price</th><td><span class="amt">$99</span><span class="per">/ month</span></td><td><span class="amt">$249</span><span class="per">/ month</span></td><td><span class="amt">$499</span><span class="per">/ month</span></td></tr>
+            <tr><th scope="row">Products</th><td>All</td><td>All</td><td>All</td></tr>
+            <tr><th scope="row">Per-Seat Charges</th><td>None</td><td>None</td><td>None</td></tr>
+            <tr><th scope="row">Add-Ons</th><td>None</td><td>None</td><td>None</td></tr>
+          </tbody>
+        </table></div>
+        <p class="aside">(There is no fourth tier.)</p>
+        <div class="replaces">
+          <div><span class="mono">Instead of</span>SOC 2 and trust portal software</div>
+          <div><span class="mono">Instead of</span>Policy management</div>
+          <div><span class="mono">Instead of</span>A help desk</div>
+          <div><span class="mono">Instead of</span>Proposal software</div>
+          <div><span class="mono">Instead of</span>Uptime monitoring</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__col"><a class="nav__brand" href="/"><img class="nav__logo" src="assets/favicon.svg" alt="" />DeftSuite</a></div>
+      <div class="footer__col"><h4>Suite</h4><a href="#suite">The Suite</a><a href="#questionnaire">How It Works</a><a href="#pricing">Pricing</a></div>
+      <div class="footer__col"><h4>Contact</h4><a href="mailto:hello@deftsuite.com">hello@deftsuite.com</a></div>
+      <div class="footer__col"><h4>For Agents</h4><a href="llms.txt">llms.txt</a></div>
+    </div>
+    <div class="footer__bottom"><span>© <span id="year">2026</span> Deft</span><span class="mono">deftsuite.com</span></div>
+  </div>
+</footer>
+
+<script src="assets/js/deft.js"></script>
+<script src="assets/js/home.js"></script>
 </body>
 </html>
