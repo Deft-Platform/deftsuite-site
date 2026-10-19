@@ -5,19 +5,23 @@ and DeftBio (deftbio.ai) as a vertical on the same base.
 
 **Status (2026-10-19):** foundation adopted from the DeftBio site. The NEA-portfolio reference
 review is in `docs/REFERENCES.md` (11 B2B / developer-tool / security sites, all confirmed
-NEA-backed). Its proposed changes to the foundation are below, awaiting Ethan's decision.
+NEA-backed).
 
-## Proposed from the reference review (not yet applied)
+## Decided (Ethan, 2026-10-19)
 
-1. **Type.** Replace Inter-only with one characterful grotesk at two weights plus a mono for labels.
-   Recommended: Geist + Geist Mono (free, Google Fonts). Only 1 of the 11 references uses plain Inter.
-2. **Palette.** Tinted neutrals (warm off-white or stone) instead of pure white on slate, and one
-   accent that signals state (live, changed, stale), not decoration. Recommended: keep Deft's deep
-   blue as the brand ink for continuity with DeftBio, drop the teal.
-3. **Structure.** Hairline rules and frames instead of rounded cards with soft shadows; cards only
-   where they hold product UI.
-4. **Heading case.** The review prefers sentence case. Ethan's standing rule is Title Case; stays
-   Title Case unless he changes it.
+1. **Palette — applied in `deft.css`.** Warm off-white page `#F6F4EF`, white surfaces, warm rules
+   `#E2DED5`, ink `#14171C`. Deft blue `#12386B` stays as the brand colour, for continuity with
+   DeftBio. Teal is dropped. One state accent, stamp vermilion `#D9441C`, for stale, changed or
+   needs-attention only — never decoration.
+2. **Heading case.** Title Case on every heading and button.
+3. **Type — not standard AI.** Rejected as AI-template defaults: Inter, Geist, Space Grotesk,
+   DM Sans, Plus Jakarta Sans, Manrope, Outfit, Poppins, Sora, Satoshi, General Sans, Cabinet
+   Grotesk. Shortlist in `docs/type-specimen.html`; pairing to be chosen from it.
+
+## Still proposed
+
+- **Structure.** Hairline rules and frames instead of rounded cards with soft shadows; cards only
+  where they hold product UI.
 
 ## Page patterns from the reference review
 

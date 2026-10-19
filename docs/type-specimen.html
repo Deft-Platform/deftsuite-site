@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DeftSuite Type Specimen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&family=Familjen+Grotesk:wght@400;500;700&family=Martian+Mono:wght@400;500&family=Host+Grotesk:wght@400;500;700&family=Fragment+Mono&family=Hanken+Grotesk:wght@400;500;800&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #F6F4EF; --surface: #FFFFFF; --ink: #14171C; --body: #33373E; --muted: #5E6168;
+    --rule: #E2DED5; --brand: #12386B; --brand-2: #1E5BCB; --stamp: #D9441C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--body); font-family: system-ui, sans-serif; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 32px 24px 64px; }
+  .palette { display: flex; flex-wrap: wrap; gap: 0; border: 1px solid var(--rule); background: var(--surface); margin-bottom: 40px; }
+  .sw { flex: 1 1 120px; padding: 12px 14px; border-right: 1px solid var(--rule); font: 12px/1.4 ui-monospace, Menlo, monospace; color: var(--muted); }
+  .sw:last-child { border-right: 0; }
+  .sw i { display: block; height: 36px; margin-bottom: 8px; border: 1px solid var(--rule); }
+
+  .spec { border-top: 1px solid var(--ink); padding: 28px 0 48px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; }
+  .tag { grid-column: 1 / -1; display: flex; justify-content: space-between; font: 12px/1 ui-monospace, Menlo, monospace; color: var(--muted); letter-spacing: .02em; }
+  .tag b { color: var(--ink); font-weight: 600; }
+  .label { font-size: 12px; letter-spacing: .04em; color: var(--stamp); margin-bottom: 14px; }
+  h1 { margin: 0; color: var(--ink); font-size: clamp(2.3rem, 4.6vw, 3.6rem); line-height: 1.02; }
+  h2 { margin: 28px 0 0; color: var(--ink); font-size: 1.5rem; line-height: 1.15; }
+  p { margin: 16px 0 0; font-size: 1.05rem; line-height: 1.55; max-width: 52ch; }
+  .btns { display: flex; gap: 10px; margin-top: 24px; }
+  .btn { padding: 11px 18px; border-radius: 6px; background: var(--brand); color: #fff; font-weight: 600; font-size: .95rem; border: 1px solid var(--brand); }
+  .btn--ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+  .ledger { background: var(--surface); border: 1px solid var(--rule); align-self: start; }
+  .row { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; padding: 14px 16px; border-bottom: 1px solid var(--rule); }
+  .row:last-child { border-bottom: 0; }
+  .row .name { font-size: 13px; color: var(--ink); }
+  .row .val { font-size: 13px; color: var(--muted); text-align: right; }
+  .row .job { grid-column: 1 / -1; font-size: .92rem; color: var(--body); }
+  .stale { color: var(--stamp) !important; }
+  .price { padding: 16px; border-top: 1px solid var(--ink); display: flex; align-items: baseline; justify-content: space-between; }
+  .price strong { font-size: 2rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .price span { font-size: 12px; color: var(--muted); }
+
+  /* A — Schibsted Grotesk + IBM Plex Mono */
+  .a { font-family: 'Schibsted Grotesk', sans-serif; }
+  .a h1 { font-weight: 800; letter-spacing: -.035em; }
+  .a h2 { font-weight: 700; letter-spacing: -.02em; }
+  .a .mono { font-family: 'IBM Plex Mono', monospace; }
+  /* B — Familjen Grotesk + Martian Mono */
+  .b { font-family: 'Familjen Grotesk', sans-serif; }
+  .b h1 { font-weight: 700; letter-spacing: -.03em; }
+  .b h2 { font-weight: 700; letter-spacing: -.015em; }
+  .b .mono { font-family: 'Martian Mono', monospace; font-size: 11.5px; }
+  /* C — Host Grotesk + Fragment Mono */
+  .c { font-family: 'Host Grotesk', sans-serif; }
+  .c h1 { font-weight: 500; letter-spacing: -.035em; }
+  .c h2 { font-weight: 500; letter-spacing: -.02em; }
+  .c .mono { font-family: 'Fragment Mono', monospace; }
+  /* D — Hanken Grotesk 800 tight + Spline Sans Mono */
+  .d { font-family: 'Hanken Grotesk', sans-serif; }
+  .d h1 { font-weight: 800; letter-spacing: -.055em; line-height: .95; }
+  .d h2 { font-weight: 800; letter-spacing: -.03em; }
+  .d .mono { font-family: 'Spline Sans Mono', monospace; }
+
+  @media (max-width: 820px) { .spec { grid-template-columns: 1fr; gap: 28px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="palette">
+    <div class="sw"><i style="background:#F6F4EF"></i>Page #F6F4EF</div>
+    <div class="sw"><i style="background:#FFFFFF"></i>Surface #FFFFFF</div>
+    <div class="sw"><i style="background:#E2DED5"></i>Rule #E2DED5</div>
+    <div class="sw"><i style="background:#14171C"></i>Ink #14171C</div>
+    <div class="sw"><i style="background:#12386B"></i>Deft Blue #12386B</div>
+    <div class="sw"><i style="background:#D9441C"></i>Stamp #D9441C</div>
+  </div>
+
+  <template id="body">
+    <div>
+      <div class="label mono">// PASS REVIEW</div>
+      <h1>Pass Procurement Like A 300-Person Vendor</h1>
+      <p>Security questionnaire, SOC 2 evidence, signed policies and a support portal, run by a team of three.</p>
+      <div class="btns"><span class="btn">Start For $99</span><span class="btn btn--ghost">See The Suite</span></div>
+      <h2>Your Auditor Wants A Folder. Here Is The Folder.</h2>
+    </div>
+    <div class="ledger">
+      <div class="row"><span class="name mono">DeftTrust</span><span class="val mono">42 controls · <span class="stale">3 stale</span></span><span class="job">SOC 2 controls with the evidence attached</span></div>
+      <div class="row"><span class="name mono">DeftDocs</span><span class="val mono">18 policies · v4.2</span><span class="job">Policies and SOPs, approved and versioned</span></div>
+      <div class="row"><span class="name mono">DeftDesk</span><span class="val mono">sha 9f3c2a</span><span class="job">Support portal and published documentation</span></div>
+      <div class="row"><span class="name mono">DeftAgents</span><span class="val mono">212 actions · 0 unapproved</span><span class="job">Agents that do the work, with an audit trail</span></div>
+      <div class="price"><strong>$99</strong><span class="mono">per month · 1–9 people · every product</span></div>
+    </div>
+  </template>
+
+  <section class="spec a"><div class="tag mono"><b>A · Schibsted Grotesk + IBM Plex Mono</b><span>editorial, newsroom</span></div></section>
+  <section class="spec b"><div class="tag mono"><b>B · Familjen Grotesk + Martian Mono</b><span>quirky, ledger</span></div></section>
+  <section class="spec c"><div class="tag mono"><b>C · Host Grotesk + Fragment Mono</b><span>quiet, precise</span></div></section>
+  <section class="spec d"><div class="tag mono"><b>D · Hanken Grotesk 800 + Spline Sans Mono</b><span>heavy, tight</span></div></section>
+</div>
+<script>
+  var t = document.getElementById('body');
+  document.querySelectorAll('.spec').forEach(function (s) { s.appendChild(t.content.cloneNode(true)); });
+</script>
+</body>
+</html>
