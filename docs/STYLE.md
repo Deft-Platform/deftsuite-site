@@ -3,9 +3,37 @@
 The shared visual system for every Deft site: deftsuite.com first, then each product page,
 and DeftBio (deftbio.ai) as a vertical on the same base.
 
-**Status (2026-10-19):** foundation only. Tokens and components are adopted from the DeftBio site.
-Page and section patterns are on hold until the NEA-portfolio reference review lands in
-`docs/REFERENCES.md`.
+**Status (2026-10-19):** foundation adopted from the DeftBio site. The NEA-portfolio reference
+review is in `docs/REFERENCES.md` (11 B2B / developer-tool / security sites, all confirmed
+NEA-backed). Its proposed changes to the foundation are below, awaiting Ethan's decision.
+
+## Proposed from the reference review (not yet applied)
+
+1. **Type.** Replace Inter-only with one characterful grotesk at two weights plus a mono for labels.
+   Recommended: Geist + Geist Mono (free, Google Fonts). Only 1 of the 11 references uses plain Inter.
+2. **Palette.** Tinted neutrals (warm off-white or stone) instead of pure white on slate, and one
+   accent that signals state (live, changed, stale), not decoration. Recommended: keep Deft's deep
+   blue as the brand ink for continuity with DeftBio, drop the teal.
+3. **Structure.** Hairline rules and frames instead of rounded cards with soft shadows; cards only
+   where they hold product UI.
+4. **Heading case.** The review prefers sentence case. Ethan's standing rule is Title Case; stays
+   Title Case unless he changes it.
+
+## Page patterns from the reference review
+
+- **Hero:** text left, a working HTML artefact right that runs across the suite (control → evidence
+  → policy → trust-portal row). Never a PNG, never a mood image.
+- **The suite:** one ruled ledger of products, each row a name in mono, its one job and a live value;
+  connections drawn as hairlines with corner ticks.
+- **Sections demonstrate:** a mono label naming the problem, the problem shown as data, then the
+  Deft version. One section, one artefact.
+- **Proof sits inside the panel it proves,** and every number states its boundary.
+- **Pricing on the page** as a comparison table with real quantities, against the cost of the
+  separate tools it replaces.
+- **Density:** 64–96px section spacing, more information per screen.
+- **Vary section types;** no two adjacent sections share a layout.
+- **Readable by agents:** `/llms.txt` and a markdown twin of each page; optional plain mode.
+- **Ownable idiom:** ruled ledgers, stamp marks, control IDs and short hashes on evidence.
 
 ## Layers
 
