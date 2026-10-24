@@ -251,25 +251,26 @@ PRODUCTS = [
         "with": [("docs", "Publish approved docs to the portal."), ("revenue", "Tickets appear on the customer's account.")],
     },
     {
-        "slug": "agents", "name": "DeftAgents", "stage": "work", "status": "Early Access",
-        "job": "AI agents that do real work, with limits, approvals and a record of every action.",
-        "headline": "AI Agents With Limits, Approvals And A Record Of Every Action",
-        "title": "DeftAgents: AI Agents With Limits, Approvals And A Record Of Every Action",
-        "cta": ("Request Early Access", "DeftAgents early access"),
+        "slug": "agents", "name": "DeftAgents", "stage": "work", "status": "In Build",
+        "job": "An AI chief of staff that keeps you on what matters now, with a fleet of agents doing the work behind it.",
+        "headline": "A Chief Of Staff For The Founder, With A Fleet Behind It",
+        "title": "DeftAgents: A Chief Of Staff For The Founder, With A Fleet Behind It",
+        "cta": ("Join The Waitlist", "DeftAgents waitlist"),
+        "cta_note": "DeftAgents is being scoped now. Join the waitlist and we will show you the first version.",
         "story": [
-            "We run sales, product and support work through AI agents. Our first code review bot never ran, and reported \"no PRs needed review\" every time.",
-            "An agent with shell access can reach far more than its job needs, so we took that away. And when an agent got something wrong, only a developer could fix it.",
+            "We run sales, product and support work through AI agents. Our first code review bot never ran, and reported \"no PRs needed review\" every time. When an agent got something wrong, only a developer could fix it.",
+            "So the first agent we are building works for the founder: a chief of staff that knows what is shifting across the company and what deserves attention now, and hands the rest to agents that log every action.",
         ],
         "short": [
             "A bot that silently stops looks exactly like a quiet day.",
-            "An agent with a shell can rewrite its own instructions.",
+            "Agents that hand work to each other in chat leave no record of who was asked to do what.",
             "If the only ways to correct an agent are chat and code, only developers can correct it.",
         ],
         "asks": [
-            ("Post today's pipeline and demo count to the sales channel.", "agents.run(\"piper\", \"daily-pipeline\")", "posted, logged"),
-            ("The agent got the renewal date wrong. Fix it.", "agents.propose_correction(...)", "awaiting review"),
+            ("What should I be working on right now?", "agents.chief_of_staff.now()", "3 priorities, 1 decision"),
+            ("Hand the renewal follow-ups to the sales agent.", "agents.create_task(\"sales\", ...)", "assigned, logged"),
         ],
-        "with": [("trust", "Every agent action is part of the audit record."), ("docs", "Agents follow the policies in DeftDocs.")],
+        "with": [("revenue", "Knows which customers renew and what they asked for."), ("trust", "Every agent action is part of the audit record."), ("docs", "Agents follow the policies in DeftDocs.")],
     },
 ]
 

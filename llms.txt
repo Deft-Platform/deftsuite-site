@@ -20,7 +20,7 @@ Keep:
 - [DeftDesk](https://deftsuite.com/desk/): One login where enterprise customers read your docs, raise tickets and exchange files. Status: Available.
 
 Do The Work:
-- [DeftAgents](https://deftsuite.com/agents/): AI agents that do real work, with limits, approvals and a record of every action. Status: Early Access.
+- [DeftAgents](https://deftsuite.com/agents/): An AI chief of staff that keeps you on what matters now, with a fleet of agents doing the work behind it. Status: In Build.
 
 ## Pricing
 
