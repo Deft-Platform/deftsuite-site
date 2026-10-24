@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /design/
+Disallow: /concepts/
+Sitemap: https://deftsuite.com/sitemap.xml

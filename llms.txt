@@ -1,0 +1,38 @@
+# DeftSuite
+
+> The enterprise stack for founder-led B2B teams that sell to enterprise and run their company through AI.
+
+## Products
+
+Win:
+- [DeftWeb](https://deftsuite.com/web/): Your website, rebuilt on Deft, edited by your AI and published by a person. Status: Early Access.
+- [DeftMarketing](https://deftsuite.com/marketing/): Your list, newsletter and sign-up funnels, without automation spaghetti. Status: Early Access.
+- [DeftRevenue](https://deftsuite.com/revenue/): Quotes, contracts, renewals and the customer record, after the deal closes. Status: Early Access.
+- [DeftDemo](https://deftsuite.com/demo/): Product walkthroughs buyers can skim, search and question. Status: In Build.
+
+Pass Review:
+- [DeftTrust](https://deftsuite.com/trust/): SOC 2 controls with their evidence collected and attached every week. Status: Early Access.
+- [DeftDocs](https://deftsuite.com/docs/): Policies and procedures, approved, versioned and signed, that your AI can edit safely. Status: In Build.
+- [DeftInfra](https://deftsuite.com/infra/): One record of every server, app and setting, and of who changed what. Status: In Build.
+- [Sentinel](https://deftsuite.com/sentinel/): Uptime monitoring that runs somewhere other than the thing it watches. Status: Available.
+
+Keep:
+- [DeftDesk](https://deftsuite.com/desk/): One login where enterprise customers read your docs, raise tickets and exchange files. Status: Available.
+
+Do The Work:
+- [DeftAgents](https://deftsuite.com/agents/): AI agents that do real work, with limits, approvals and a record of every action. Status: Early Access.
+
+## Pricing
+
+Flat monthly price by team size. Not per user. No add-ons.
+
+- The whole suite: $99 (1 to 9 people), $249 (10 to 19), $499 (20 or more).
+- Any one product: $39, $99 or $199 by the same tiers. The suite price caps the bill.
+
+## Your AI
+
+Each product has its own agent connection over MCP, with human approval enforced on the server for publish, send, sign and approve. One connection across the whole suite (Deft MCP) is in build.
+
+## Contact
+
+hello@deftsuite.com

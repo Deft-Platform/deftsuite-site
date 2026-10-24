@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DeftInfra: Every Server, App And Setting, With Who Changed What</title>
+<meta name="description" content="DeftInfra: One record of every server, app and setting, and of who changed what. Part of DeftSuite, the enterprise stack for founder-led teams." />
+<link rel="canonical" href="https://deftsuite.com/infra/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="DeftInfra: Every Server, App And Setting, With Who Changed What" />
+<meta property="og:description" content="DeftInfra: One record of every server, app and setting, and of who changed what. Part of DeftSuite, the enterprise stack for founder-led teams." />
+<meta property="og:url" content="https://deftsuite.com/infra/" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="alternate" type="text/plain" href="/llms.txt" title="Plain text for agents" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body class="product">
+<div class="top">
+  <header class="nav">
+  <a class="brand" href="/">DeftSuite</a>
+  <nav class="links" aria-label="Primary"><a href="/#suite">Products</a><a href="/#ai">Your AI</a><a href="/#pick">Pricing</a></nav>
+  <a class="btn" href="mailto:hello@deftsuite.com?subject=DeftSuite%20early%20access">Request Early Access</a>
+</header>
+  <section class="phero">
+    <div>
+      <div class="crumbs mono"><a href="/#suite">DeftSuite</a> / Pass Review / DeftInfra</div>
+      <h1>Every Server, App And Setting, With Who Changed What</h1>
+      <p class="sub">One record of every server, app and setting, and of who changed what.</p>
+      <div class="cta"><a class="btn" href="mailto:hello@deftsuite.com?subject=DeftInfra%20waitlist">Join The Waitlist</a><a class="ghost" href="#price">See Pricing</a></div>
+      <p class="note"><span class="pill is-build mono">In Build</span> In build: join the waitlist and we will tell you when it ships.</p>
+    </div>
+    <div class="console" aria-label="Asking your AI to use DeftInfra">
+      <div class="console__bar mono"><span>Your AI · connected to DeftInfra</span> <span class="mono preview-tag">Preview</span></div>
+      <div class="ask"><span class="who mono">YOU</span>Which apps run on the production host, and what changed this week?</div>
+        <div class="call mono"><span>infra.inventory(host=&quot;prod-1&quot;)</span><span class="st">6 apps, 3 changes</span></div><div class="ask"><span class="who mono">YOU</span>Add the STRIPE_WEBHOOK_SECRET reference to staging.</div>
+        <div class="call mono"><span>infra.set_variable(&quot;staging&quot;, ...)</span><span class="st">recorded, not restarted</span></div>
+    </div>
+  </section>
+</div>
+
+<section class="story">
+  <div class="wrap split">
+    <h2>Why We Built It</h2>
+    <div class="story__body"><p>The inventory we had written down was not the estate we ran: one server ran six apps, not two.</p><p>When an upgrade destroyed every app on a test server, we rebuilt from our configuration record, and every setting that had lived only on the box was gone. The first version of our own tool had one shared admin key, so nobody could say who changed what.</p></div>
+  </div>
+</section>
+
+<section class="short">
+  <div class="wrap split">
+    <h2>Where The Alternatives Fall Short</h2>
+    <ol class="short__list"><li><span class="n mono">01</span><span>A setting that lives only on the server dies with the server.</span></li><li><span class="n mono">02</span><span>The inventory you wrote down is not the estate you run.</span></li><li><span class="n mono">03</span><span>One shared admin key means no record of who changed anything.</span></li></ol>
+  </div>
+</section>
+
+<section class="with">
+  <div class="wrap split">
+    <h2>Works With The Rest Of Deft</h2>
+    <div><a class="link-row" href="/trust/"><span class="mono">DeftTrust</span><span>Every change becomes change-management evidence.</span><span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="wrap split">
+    <h2>Pricing</h2>
+    <div>
+      <table class="ptable">
+        <thead><tr><th></th><th>1–9 People</th><th>10–19 People</th><th>20+ People</th></tr></thead>
+        <tbody>
+          <tr><th>DeftInfra on its own</th><td>$39</td><td>$99</td><td>$199</td></tr>
+          <tr><th>The whole suite</th><td>$99</td><td>$249</td><td>$499</td></tr>
+        </tbody>
+      </table>
+      <p class="aside mono">Per month. Not per user. Three products cost about the same as the suite. <a href="/#pick">Build your plan</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="fcol fcol--brand"><a class="brand brand--ink" href="/">DeftSuite</a><p>The enterprise stack for founder-led teams.</p></div>
+    <div class="fcol"><h4>Win</h4><a href="/web/">DeftWeb</a><a href="/marketing/">DeftMarketing</a><a href="/revenue/">DeftRevenue</a><a href="/demo/">DeftDemo</a></div><div class="fcol"><h4>Pass Review</h4><a href="/trust/">DeftTrust</a><a href="/docs/">DeftDocs</a><a href="/infra/">DeftInfra</a><a href="/sentinel/">Sentinel</a></div><div class="fcol"><h4>Keep</h4><a href="/desk/">DeftDesk</a></div><div class="fcol"><h4>Do The Work</h4><a href="/agents/">DeftAgents</a></div>
+    <div class="fcol"><h4>Company</h4><a href="mailto:hello@deftsuite.com">hello@deftsuite.com</a><a href="/llms.txt">llms.txt</a></div>
+  </div>
+  <div class="foot__base mono"><span>© 2026 Deft</span><span>deftsuite.com</span></div>
+</footer>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

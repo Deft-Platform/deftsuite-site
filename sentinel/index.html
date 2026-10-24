@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sentinel: Know It Broke Before Your Customer Does</title>
+<meta name="description" content="Sentinel: Uptime monitoring that runs somewhere other than the thing it watches. Part of DeftSuite, the enterprise stack for founder-led teams." />
+<link rel="canonical" href="https://deftsuite.com/sentinel/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sentinel: Know It Broke Before Your Customer Does" />
+<meta property="og:description" content="Sentinel: Uptime monitoring that runs somewhere other than the thing it watches. Part of DeftSuite, the enterprise stack for founder-led teams." />
+<meta property="og:url" content="https://deftsuite.com/sentinel/" />
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="alternate" type="text/plain" href="/llms.txt" title="Plain text for agents" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body class="product">
+<div class="top">
+  <header class="nav">
+  <a class="brand" href="/">DeftSuite</a>
+  <nav class="links" aria-label="Primary"><a href="/#suite">Products</a><a href="/#ai">Your AI</a><a href="/#pick">Pricing</a></nav>
+  <a class="btn" href="mailto:hello@deftsuite.com?subject=DeftSuite%20early%20access">Request Early Access</a>
+</header>
+  <section class="phero">
+    <div>
+      <div class="crumbs mono"><a href="/#suite">DeftSuite</a> / Pass Review / Sentinel</div>
+      <h1>Know It Broke Before Your Customer Does</h1>
+      <p class="sub">Uptime monitoring that runs somewhere other than the thing it watches.</p>
+      <div class="cta"><a class="btn" href="https://github.com/ethandrower/sentinel">View On GitHub</a><a class="ghost" href="#price">See Pricing</a></div>
+      <p class="note"><span class="pill is-live mono">Available</span> Sentinel is open source under the MIT licence. Run it yourself, or let Deft run it with the rest of the suite.</p>
+    </div>
+    <div class="console" aria-label="Asking your AI to use Sentinel">
+      <div class="console__bar mono"><span>Your AI · connected to Sentinel</span></div>
+      <div class="ask"><span class="who mono">YOU</span>Is anything down right now?</div>
+        <div class="call mono"><span>sentinel.status()</span><span class="st">all 14 checks passing</span></div><div class="ask"><span class="who mono">YOU</span>When does the API certificate expire?</div>
+        <div class="call mono"><span>sentinel.check(&quot;api-tls&quot;)</span><span class="st">in 41 days</span></div>
+    </div>
+  </section>
+</div>
+
+<section class="story">
+  <div class="wrap split">
+    <h2>Why We Built It</h2>
+    <div class="story__body"><p>Our monitoring ran inside the application. When a background worker died, it took every scheduled task with it, including the alarm meant to report the failure.</p><p>Nothing told us for two days. Sentinel runs on a separate host, so the thing that breaks cannot silence the thing that reports it.</p></div>
+  </div>
+</section>
+
+<section class="short">
+  <div class="wrap split">
+    <h2>Where The Alternatives Fall Short</h2>
+    <ol class="short__list"><li><span class="n mono">01</span><span>Monitoring inside the app dies with the app.</span></li><li><span class="n mono">02</span><span>Checking that a process exists is not checking that work is flowing.</span></li><li><span class="n mono">03</span><span>An alert channel full of test-server noise trains people to ignore production.</span></li></ol>
+  </div>
+</section>
+
+<section class="with">
+  <div class="wrap split">
+    <h2>Works With The Rest Of Deft</h2>
+    <div><a class="link-row" href="/trust/"><span class="mono">DeftTrust</span><span>Daily uptime records become availability evidence.</span><span class="arrow">→</span></a></div>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="wrap split">
+    <h2>Pricing</h2>
+    <div>
+      <table class="ptable">
+        <thead><tr><th></th><th>1–9 People</th><th>10–19 People</th><th>20+ People</th></tr></thead>
+        <tbody>
+          <tr><th>Sentinel on its own</th><td>$39</td><td>$99</td><td>$199</td></tr>
+          <tr><th>The whole suite</th><td>$99</td><td>$249</td><td>$499</td></tr>
+        </tbody>
+      </table>
+      <p class="aside mono">Per month. Not per user. Three products cost about the same as the suite. <a href="/#pick">Build your plan</a></p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="fcol fcol--brand"><a class="brand brand--ink" href="/">DeftSuite</a><p>The enterprise stack for founder-led teams.</p></div>
+    <div class="fcol"><h4>Win</h4><a href="/web/">DeftWeb</a><a href="/marketing/">DeftMarketing</a><a href="/revenue/">DeftRevenue</a><a href="/demo/">DeftDemo</a></div><div class="fcol"><h4>Pass Review</h4><a href="/trust/">DeftTrust</a><a href="/docs/">DeftDocs</a><a href="/infra/">DeftInfra</a><a href="/sentinel/">Sentinel</a></div><div class="fcol"><h4>Keep</h4><a href="/desk/">DeftDesk</a></div><div class="fcol"><h4>Do The Work</h4><a href="/agents/">DeftAgents</a></div>
+    <div class="fcol"><h4>Company</h4><a href="mailto:hello@deftsuite.com">hello@deftsuite.com</a><a href="/llms.txt">llms.txt</a></div>
+  </div>
+  <div class="foot__base mono"><span>© 2026 Deft</span><span>deftsuite.com</span></div>
+</footer>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>
